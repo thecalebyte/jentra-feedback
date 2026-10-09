@@ -1,0 +1,29 @@
+name: Feature request
+description: Describe an outcome that Jentra could make easier.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What do you want to accomplish?
+    validations:
+      required: true
+  - type: textarea
+    id: difficulty
+    attributes:
+      label: What is difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Proposed improvement
+      description: Optional. Describe the experience, not only a technical implementation.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-report safety
+      options:
+        - label: I removed credentials, private content, Journey data and personal information.
+          required: true

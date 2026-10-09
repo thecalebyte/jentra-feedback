@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible problem in the Jentra experimental prototype.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Public reports are visible to everyone. Remove credentials, private content, Journey data and unsanitised logs.
+  - type: input
+    id: version
+    attributes:
+      label: Jentra version
+      placeholder: 0.1.0-experimental
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and installation method
+    validations:
+      required: true
+  - type: input
+    id: integration
+    attributes:
+      label: Relevant agent or integration
+      description: Name only what is relevant; do not include keys or tokens.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional sanitised logs or screenshots
+      description: Confirm that secrets and private content have been removed.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-report safety
+      options:
+        - label: I removed credentials, tokens, private repository content, Journey data and personal information.
+          required: true
+        - label: This is not a sensitive security vulnerability.
+          required: true
